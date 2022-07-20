@@ -33,7 +33,7 @@
                 </textarea>
             </div>
             <div class="col-sm-12 text-end">
-                <button type="submit">
+                <button type="submit" class="btn btn-primary">
                     Guardar
                 </button>
             </div>

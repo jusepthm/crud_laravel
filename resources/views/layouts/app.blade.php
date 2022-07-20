@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <h1>
-                    tabla
+                    Tareas
                 </h1>
             </div>
             <div class="col-sm-12">
