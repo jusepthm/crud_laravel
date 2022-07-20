@@ -4,7 +4,8 @@
     
 @section('contenido')
     <h3>Registrar tarea</h3>
-    <form action="javascripts:void(0)">
+    <form action="{{ route('tarea.store')}} }}" method="POST">
+        @csrf
         <div class="row">
             <div class="col-sm-12">
                 <label for="InputNombre" class="form-label">* Nombre de la tarea</label>
@@ -32,7 +33,7 @@
 
                 </textarea>
             </div>
-            <div class="col-sm-12 text-end">
+            <div class="col-sm-12 text-end my-2" >
                 <button type="submit" class="btn btn-primary">
                     Guardar
                 </button>
