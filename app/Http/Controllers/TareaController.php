@@ -15,6 +15,7 @@ class TareaController extends Controller
     public function index()
     {
         //
+        
     }
 
     /**
@@ -25,7 +26,8 @@ class TareaController extends Controller
     public function create()
     {
         //
-        
+        return view('tarea.create');
+
     }
 
     /**
