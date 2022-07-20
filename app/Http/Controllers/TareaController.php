@@ -27,6 +27,7 @@ class TareaController extends Controller
     {
         //
         return view('tarea.create');
+        
 
     }
 
