@@ -20,7 +20,7 @@
                 </h1>
             </div>
             <div class="col-sm-12">
-                <a href="#" class="btn btn-link">Crear nueva tarea</a>
+                <a href="{{route('tarea.create')}}" class="btn btn-link">Crear nueva tarea</a>
                 <a href="#" class="btn btn-link">Listar tareas</a>
             </div>
             
