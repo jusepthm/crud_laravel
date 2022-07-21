@@ -37,7 +37,7 @@
                         {{ $tarea->finalizada() }}
                     </td>
                     <td>
-                        {{ $tarea->fecha_limite }}
+                        {{ $tarea->fecha_limite/* ->format('H:i d / m / y') */ }}
                     </td>
                     <td>
                         {{ $tarea->urgencia() }}
