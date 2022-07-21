@@ -102,6 +102,7 @@ class TareaController extends Controller
     {
         //
         $tarea->delete();
+        $tarea->restore();
         return redirect()->route('tarea.index');
     }
 }

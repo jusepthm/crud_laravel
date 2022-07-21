@@ -20,9 +20,10 @@
     </ul>
     <hr>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12 mb-2">
             <form action="{{ route('tarea.destroy', $tarea) }}" method="post">
             @csrf
+            @method('delete')
             <button class="btn btn-danger btm-sm" type="submit">
                 Borrar
             </button>
