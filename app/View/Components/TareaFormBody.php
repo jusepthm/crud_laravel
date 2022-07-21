@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Tarea;
 use Illuminate\View\Component;
 
 class TareaFormBody extends Component
@@ -15,7 +16,12 @@ class TareaFormBody extends Component
      */
     public function __construct($tarea = null)
     {
-        //
+        if(is_null($tarea))
+        {
+            $tarea = Tarea::make([
+                'urgencia' => 0
+            ]);
+        }
         $this->tarea = $tarea;
     }
 
@@ -28,6 +34,7 @@ class TareaFormBody extends Component
     {
         $params = [
             'tarea' => $this->tarea,
+            'urgencias' => Tarea::URGENCIAS,
         ];
         return view('components.tarea-form-body', $params);
     }
