@@ -4,7 +4,7 @@
                 <label for="InputNombre" class="form-label">* Nombre de la tarea</label>
                 <input type="text" name="nombre" id="InputNombre" class="form-control" placeholder="..." value="{{ old('nombre', $tarea->nombre) }}">
                 <div class="col-sm-4">
-                    <input type="checkbox" name="finalizada" id="InputFinalizada" class="form-check-input" @checked(old('finalizada', $tarea->finalizada))>
+                    <input type="checkbox" name="finalizada" id="InputFinalizada" class="form-check-input" value="1" @checked(old('finalizada', $tarea->finalizada))>
                     <label for="InputFinalizada" class="form-check-label">Finalizada</label>
                 </div>
             </div>
