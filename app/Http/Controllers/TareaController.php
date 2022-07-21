@@ -76,6 +76,8 @@ class TareaController extends Controller
     public function edit(Tarea $tarea)
     {
         //
+        /* dd($tarea); */
+        return view('tarea.edit', compact('tarea'));
     }
 
     /**

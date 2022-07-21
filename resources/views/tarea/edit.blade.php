@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', "Nueva tarea")
+@section('title', "Editar tarea")
     
 @section('contenido')
-    <h3>Registrar tarea</h3>
+    <h3>Editar tarea  <i>{{ $tarea->nombre }}</i> </h3>
     <form action="{{ route('tarea.store')}}" method="POST">
-        <x-tarea-form-body/>
+        <x-tarea-form-body :tarea="$tarea"/>
     </form>
     @if ($errors->any())
     <div class="alert alert-danger">
