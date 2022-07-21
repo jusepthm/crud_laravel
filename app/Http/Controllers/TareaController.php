@@ -15,6 +15,8 @@ class TareaController extends Controller
     public function index()
     {
         //
+        $tareas = Tarea::OrderByDesc('id')->get();
+        return view('tarea.index', compact('tareas'));
         
     }
 
@@ -49,7 +51,9 @@ class TareaController extends Controller
             'fecha_limite' =>'required|date_format:Y-m-d\TH:i'
 
         ]);
-        dd($datos);
+        /* dd($datos); */
+        $tarea = Tarea::create($datos);
+        return redirect()->route('tarea.index');
     }
 
     /**

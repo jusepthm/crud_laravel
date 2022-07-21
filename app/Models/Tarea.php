@@ -20,6 +20,15 @@ class Tarea extends Model
     'fecha_limite',
     'urgencia',
     ];
-
     protected $datos =['fecha_limite'];
+    public const URGENCIA =['Baja','Normal','Alta'];
+
+    public function urgencia(){
+        return self::URGENCIA[$this->urgencia];
+    }
+
+    public function finalizada(){
+        return $this->finalizada == 1 ? 'Si' : 'No';
+    }
+
 }
