@@ -60,6 +60,7 @@ class TareaController extends Controller
     public function show(Tarea $tarea)
     {
         //
+        return view('tarea.show', ['tarea'=> $tarea]);
     }
 
     /**
@@ -100,5 +101,7 @@ class TareaController extends Controller
     public function destroy(Tarea $tarea)
     {
         //
+        $tarea->delete();
+        return redirect()->route('tarea.index');
     }
 }

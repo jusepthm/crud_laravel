@@ -9,15 +9,26 @@
             Finalizada: <strong> {{ $tarea->estadoFinalizada() }}</strong>
         </li>
         <li>
-            Urgencia: <strong> {{ $tarea->urgencia }}</strong>
+            Urgencia: <strong> {{ $tarea->urgencia() }}</strong>
         </li>
         <li>
-            Fecha limite: <strong> {{ $tarea->fecha_limite }}</strong>
+            Fecha limite: <strong> {{ $tarea->fecha_limite/* ->format('H:i d / m / Y') */ }}</strong>
         </li>
         <p>
             {{ $tarea->descripcion }}
         </p>
     </ul>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <form action="{{ route('tarea.destroy', $tarea) }}" method="post">
+            @csrf
+            <button class="btn btn-danger btm-sm" type="submit">
+                Borrar
+            </button>
+        </form>
+        </div>
+    </div>
     
 
 @endsection

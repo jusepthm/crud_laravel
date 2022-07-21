@@ -25,6 +25,7 @@ Route::post('tarea/guardar', [TareaController::class, 'store'])->name('tarea.sto
 Route::get('tarea/listar', [TareaController::class, 'index'])->name('tarea.index');
 Route::get('tarea/{tarea}/editar', [TareaController::class, 'edit'])->name('tarea.edit');
 Route::put('tarea/{tarea}/actualizar', [TareaController::class, 'update'])->name('tarea.update');
+Route::delete('tarea/{tarea}/eliminar', [TareaController::class, 'destroy'])->name('tarea.destroy');
 
 
 
