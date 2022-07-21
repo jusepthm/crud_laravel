@@ -6,6 +6,7 @@ use App\Models\Tarea;
 use Illuminate\Http\Request;
 use App\Http\Requests\TareaRequest;
 
+
 class TareaController extends Controller
 {
     /**
