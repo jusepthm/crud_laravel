@@ -4,7 +4,7 @@
     
 @section('contenido')
     <h3>Registrar tarea</h3>
-    <form action="{{ route('tarea.store')}} }}" method="POST">
+    <form action="{{ route('tarea.store')}}" method="POST">
         @csrf
         <div class="row">
             <div class="col-sm-12">
@@ -40,4 +40,15 @@
             </div>
         </div>
     </form>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+
 @endsection
